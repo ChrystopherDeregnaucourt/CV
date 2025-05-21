@@ -24,6 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    window.addEventListener('scroll', function () {
+    skillLevels.forEach(level => {
+        if (isInViewport(level)) {
+            level.style.width = level.getAttribute('data-width');
+        }
+    });
+});
+
     // Animate skill bars on scroll
     const skillLevels = document.querySelectorAll('.skill-level');
     
