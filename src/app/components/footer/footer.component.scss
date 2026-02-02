@@ -1,0 +1,42 @@
+$secondary-color: #3498db;
+$text-light: #7f8c8d;
+$transition: all 0.3s ease;
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  color: white;
+  margin: 0 0.5rem;
+  transition: $transition;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    transform: translateY(-3px);
+  }
+
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+footer p {
+  color: $text-light;
+  font-size: 0.9rem;
+}

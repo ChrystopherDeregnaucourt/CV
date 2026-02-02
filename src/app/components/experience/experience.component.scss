@@ -1,0 +1,30 @@
+@import '../../shared/section.scss';
+@import '../../shared/timeline.scss';
+
+.skills-acquired {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #ddd;
+
+  h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+}
+
+.skill-tag {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  margin: 0.2rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+}

@@ -1,0 +1,62 @@
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$text-light: #7f8c8d;
+
+header {
+  margin-bottom: 2rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-info {
+  h1 {
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+
+  .title {
+    color: $secondary-color;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $text-light;
+
+  i {
+    color: $secondary-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,21 @@
+<section class="section">
+  <h2>Expérience professionnelle</h2>
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let exp of experiences">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">{{ exp.period }} - {{ exp.contractType }}</div>
+      <div class="timeline-content">
+        <h3>{{ exp.title }}</h3>
+        <h4>{{ exp.company }}, {{ exp.location }}</h4>
+        <p>{{ exp.description }}</p>
+        <ul>
+          <li *ngFor="let task of exp.tasks">{{ task }}</li>
+        </ul>
+        <div class="skills-acquired">
+          <h5>Environnement Technique :</h5>
+          <span class="skill-tag" *ngFor="let skill of exp.skills">{{ skill.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="section">
+  <h2>Compétences techniques</h2>
+  <div class="skills-container">
+    <div class="skills-category" *ngFor="let category of skillCategories">
+      <h3>{{ category.name }}</h3>
+      <div class="skill" *ngFor="let skill of category.skills">
+        <span class="skill-name">{{ skill.name }}</span>
+        <div class="skill-bar">
+          <div 
+            #skillLevel
+            class="skill-level" 
+            [attr.data-skill]="getSkillId(category.name, skill.name)"
+            [style.width]="isAnimated(getSkillId(category.name, skill.name)) ? skill.level + '%' : '0%'">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
