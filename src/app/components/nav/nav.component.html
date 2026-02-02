@@ -1,0 +1,12 @@
+<nav>
+  <ul>
+    <li *ngFor="let item of navItems">
+      <a 
+        [href]="'#' + item.id" 
+        [class.active]="activeSection === item.id"
+        (click)="onNavClick($event, item.id)">
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+</nav>

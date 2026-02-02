@@ -1,0 +1,16 @@
+<section class="section">
+  <h2>Langues</h2>
+  <div class="languages-container">
+    <div class="language" *ngFor="let lang of languages">
+      <span class="language-name">{{ lang.name }}</span>
+      <div class="language-level">
+        <span 
+          class="dot" 
+          *ngFor="let filled of getDots(lang.level); let i = index"
+          [class.filled]="filled">
+        </span>
+        <span class="level-description">{{ lang.description }}</span>
+      </div>
+    </div>
+  </div>
+</section>

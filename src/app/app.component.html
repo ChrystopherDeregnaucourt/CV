@@ -1,0 +1,19 @@
+<div id="particles-js"></div>
+<div class="container">
+  <app-header></app-header>
+  
+  <app-nav 
+    [activeSection]="activeSection" 
+    (navigate)="onNavigate($event)">
+  </app-nav>
+  
+  <main>
+    <app-about id="about"></app-about>
+    <app-experience id="experience"></app-experience>
+    <app-education id="education"></app-education>
+    <app-skills id="skills"></app-skills>
+    <app-languages id="languages"></app-languages>
+  </main>
+  
+  <app-footer></app-footer>
+</div>
