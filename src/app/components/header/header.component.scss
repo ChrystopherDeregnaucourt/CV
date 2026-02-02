@@ -1,6 +1,8 @@
 $primary-color: #2c3e50;
 $secondary-color: #3498db;
+$accent-color: #27ae60;
 $text-light: #7f8c8d;
+$transition: all 0.3s ease;
 
 header {
   margin-bottom: 2rem;
@@ -13,6 +15,8 @@ header {
 }
 
 .profile-info {
+  width: 100%;
+
   h1 {
     color: $primary-color;
     margin-bottom: 0.5rem;
@@ -24,6 +28,74 @@ header {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: 500;
+  }
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: $transition;
+  white-space: nowrap;
+
+  i {
+    font-size: 1rem;
+  }
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  // Bouton CV Visuel (principal)
+  &.visual {
+    background: linear-gradient(135deg, $secondary-color, #2980b9);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+
+    &:hover:not(:disabled) {
+      box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+      background: linear-gradient(135deg, #2980b9, $secondary-color);
+    }
+  }
+
+  // Bouton CV ATS (secondaire)
+  &.ats {
+    background: linear-gradient(135deg, $accent-color, #219a52);
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+
+    &:hover:not(:disabled) {
+      box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+      background: linear-gradient(135deg, #219a52, $accent-color);
+    }
   }
 }
 
@@ -48,6 +120,21 @@ header {
   .profile {
     flex-direction: column;
     text-align: center;
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-buttons {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .download-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
 
   .profile-info h1 {

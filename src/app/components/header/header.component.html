@@ -1,8 +1,28 @@
 <header>
   <div class="profile">
     <div class="profile-info">
-      <h1>{{ profile.name }}</h1>
-      <p class="title">{{ profile.title }}</p>
+      <div class="header-top">
+        <div>
+          <h1>{{ profile.name }}</h1>
+          <p class="title">{{ profile.title }}</p>
+        </div>
+        <div class="download-buttons">
+          <button 
+            class="download-btn visual" 
+            (click)="downloadPdfVisual()" 
+            title="Télécharger le CV en PDF">
+            <i class="fas fa-file-pdf"></i>
+            <span>Télécharger CV</span>
+          </button>
+          <button 
+            class="download-btn ats" 
+            (click)="downloadPdfAts()" 
+            title="Télécharger le CV optimisé pour les systèmes ATS">
+            <i class="fas fa-robot"></i>
+            <span>CV version ATS</span>
+          </button>
+        </div>
+      </div>
       <div class="contact-info">
         <div class="contact-item">
           <i class="fas fa-envelope"></i>
